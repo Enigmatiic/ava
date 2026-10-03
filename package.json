@@ -1,0 +1,10 @@
+{
+  "name": "ava",
+  "version": "0.1.0",
+  "description": "A working method for building software with a coding agent: init, intake, milestones, issues, review. Installs into any project for Claude Code or Codex.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "ava": "src/cli.ts" },
+  "files": ["src", "skill"],
+  "scripts": { "test": "bun test" }
+}
