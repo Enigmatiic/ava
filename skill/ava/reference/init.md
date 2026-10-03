@@ -4,7 +4,9 @@
 design system is decided, the work is cut into milestones, the checks that guard every turn
 are in place, and the tracker is ready. Every project starts here, an empty one included.
 
-Nothing in this playbook fixes code. Problems found along the way become issues in step 8.
+Init changes no product code, not even a one-line fix for a failing test. Problems found
+along the way become issues in step 8, and `M0` fixes them, run as its own command. Keeping
+the two apart is what lets the user read the baseline before anything moves.
 
 ## 1. Preflight
 
@@ -176,7 +178,8 @@ GitHub mode:
 5. Offer the project board: `bash scripts/board.sh`, from this skill's directory. It needs a
    scope only the user can grant (`gh auth refresh -s project`).
 
-Local mode: the same epics and issues as files under `docs/issues/`.
+Local mode: the same issues as files under `docs/issues/`. No epic files: the plan's "Done
+when" lists sit in the same repository and already do that job.
 
 ## 9. Close
 

@@ -67,6 +67,9 @@ Moving an issue changes `milestone` and adds a dated line saying why. Closing se
 `status: closed` and fills the Status line. List the backlog with
 `grep -l "^status: open" docs/issues/*.md`.
 
+Local mode has no `epic` issues. Where a playbook says to update the epic, update the
+milestone's section of `docs/IMPLEMENTATION_PLAN.md` instead.
+
 When the project later gets a GitHub repository, create each open file with `gh issue create`
 and replace the file's body with a link to the issue.
 

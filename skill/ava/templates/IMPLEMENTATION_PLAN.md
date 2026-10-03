@@ -3,8 +3,8 @@
 Milestones in the order they are built. A box is ticked only when its command, test or live
 step has passed. Milestones are never renumbered: issues and commits refer to them.
 
-The last milestone is always **Hardening**: tooling, CI, measurement and consistency work
-that surfaces along the way is sent there.
+Tooling, CI, measurement and consistency work that surfaces along the way goes to a last
+milestone named **Hardening**. Add it the first time there is something to put in it.
 
 ## M0 — <name>
 
