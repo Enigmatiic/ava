@@ -19,8 +19,3 @@ milestone named **Hardening**. Add it the first time there is something to put i
 ### Done when
 
 - [ ] <an observable statement> — checked by `<command>` / `<test name>` / <live step>
-
-### Deferred
-
-<Empty until the milestone closes. Then: each unticked item, why, and which milestone will
-tick it.>

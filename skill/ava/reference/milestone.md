@@ -89,8 +89,8 @@ Tick the "Done when" items that have evidence, and the delivered lines of the `e
 deal with everything left. **Nothing this milestone could not do or check may stay parked on
 it.**
 
-- **Unticked items.** Do not tick them and do not drop them. In the plan, say why each is
-  deferred and which milestone will tick it, and give that milestone a matching checklist
+- **Unticked items.** Do not tick them and do not drop them. Under a `### Deferred` heading in the milestone's
+  section of the plan, say why each is deferred and which milestone will tick it, and give that milestone a matching checklist
   item. A box only one side knows about is a box nobody ticks.
 - **Open issues still on this milestone.** Move each to where it becomes actionable. Blocked
   on a later deliverable → that milestone. Tooling, CI, measurement → Hardening, the

@@ -34,7 +34,7 @@ skill/ava/reference/          init, intake, milestone, issue, review, status, an
 skill/ava/reviewers/          requirements, slop, compliance (prompt bodies, no frontmatter)
 skill/ava/templates/          PROGRESS.md, IMPLEMENTATION_PLAN.md, project-section.md
 skill/ava/scripts/            block-rm-rf.sh, verify-on-stop.sh, labels.sh, board.sh
-skill/ava/scripts/hooks.test.ts
+src/hooks.test.ts             the two hook scripts, run through bash
 README.md
 ```
 
@@ -57,7 +57,7 @@ doctor(dir: string, home?: string): { ok: boolean; label: string }[]
 
 ### 1. Installer core
 
-- [ ] Tests first, in `src/install.test.ts`:
+- [x] Tests first, in `src/install.test.ts`:
   - `upsertBlock`: empty file; appended after existing text; replaces an existing block and
     keeps the text before and after it; applying twice equals applying once.
   - `mergeHooks`: empty settings; unrelated hooks and unrelated keys survive; applying twice
@@ -73,38 +73,38 @@ doctor(dir: string, home?: string): { ok: boolean; label: string }[]
   - An extra whose command fails yields a note containing the command to run by hand.
   - Unparseable `settings.json` throws and the file is unchanged.
   - `doctor` fails on an empty directory and passes its install checks after `install`.
-- [ ] Run `bun test` — fails (module missing).
-- [ ] Write `src/install.ts`, `src/block.md`, `package.json`.
-- [ ] Run `bun test` — passes.
-- [ ] Write `src/cli.ts`: `install`, `doctor`, `--provider`, `--extras`, `--yes`, prompts via
+- [x] Run `bun test` — fails (module missing).
+- [x] Write `src/install.ts`, `src/block.md`, `package.json`.
+- [x] Run `bun test` — passes.
+- [x] Write `src/cli.ts`: `install`, `doctor`, `--provider`, `--extras`, `--yes`, prompts via
   `prompt()` only when a flag is missing and stdin is a terminal.
-- [ ] Commit.
+- [x] Commit.
 
 ### 2. Hook scripts
 
-- [ ] Tests first, in `skill/ava/scripts/hooks.test.ts`, spawning `bash`:
+- [x] Tests first, in `src/hooks.test.ts`, spawning `bash` (kept out of the skill so a project's test runner never picks it up):
   - `block-rm-rf.sh`: exit 2 on `rm -rf x` and `rm -fr x`; exit 0 on `rm x` and `trash x`.
   - `verify-on-stop.sh`: exit 0 without `.ava/verify.sh`; exit 2 with the output on stderr
     when it fails; exit 0 when it passes; exit 0 when `stop_hook_active` is true.
-- [ ] Write the two scripts. `verify-on-stop.sh` changes to the project root (four levels
+- [x] Write the two scripts. `verify-on-stop.sh` changes to the project root (four levels
   above its own directory) before running `.ava/verify.sh`.
-- [ ] Run `bun test`. Commit.
+- [x] Run `bun test`. Commit.
 
 ### 3. The skill
 
-- [ ] `SKILL.md`, the seven playbooks, three reviewers, three templates.
-- [ ] `labels.sh` (idempotent label creation) and `board.sh` (the Decens board script without
+- [x] `SKILL.md`, the seven playbooks, three reviewers, three templates.
+- [x] `labels.sh` (idempotent label creation) and `board.sh` (the Decens board script without
   the hard-coded owner, repository or Python).
-- [ ] Read every playbook against `reference/anti-slop.md`. Commit.
+- [x] Read every playbook against `reference/anti-slop.md`. Commit.
 
 ### 4. README
 
-- [ ] Install, the six commands, what lands in the project, update, uninstall. Commit.
+- [x] Install, the six commands, what lands in the project, update, uninstall. Commit.
 
 ### 5. End to end
 
-- [ ] `bunx` from a git URL of the local repository into a scratch empty project and a
+- [x] `bunx` from a git URL of the local repository into a scratch empty project and a
   scratch existing project; `doctor` on both.
-- [ ] First turn of `/ava init` and `/ava status` in a scratch project through a headless
+- [x] First turn of `/ava init` and `/ava status` in a scratch project through a headless
   agent session; read the transcript.
-- [ ] Record what was and was not verified.
+- [x] Record what was and was not verified.

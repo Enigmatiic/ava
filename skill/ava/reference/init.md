@@ -161,7 +161,8 @@ the milestone's verify step. It contains only checks that pass today. Each check
 today becomes a `severity:high` issue on `M0`, and joins the script when it is fixed. Run the
 script once and keep its output.
 
-**`.gitignore`** — make sure secrets (`.env*`), build output and `graphify-out/` are ignored.
+**`.gitignore`** — make sure secrets (`.env*`) and build output are ignored, and `graphify-out/`
+when graphify is installed.
 `.ava/` is committed.
 
 ## 8. Tracker

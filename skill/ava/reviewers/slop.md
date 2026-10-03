@@ -25,6 +25,9 @@ Look in particular for:
   no output behind it;
 - files nobody asked for.
 
+The headings and sections a playbook template prescribes are not slop; what was written under
+them can be.
+
 Report one line per finding: `file:line` — what to delete or replace — what replaces it.
 Order by how much it removes. Do not report correctness bugs or style preferences; other
 reviewers cover those. If the change is clean, say so in one sentence.
