@@ -25,7 +25,7 @@ conclusions about it.
 
 ## 3. Findings
 
-- Check each finding against the code before acting on it. A reviewer can be wrong.
+- Check each and every finding against the code before acting on it. A reviewer can be wrong.
 - Open an issue for every finding that survives ([issue.md](issue.md)).
 - Fix now what affects correctness, a requirement or compliance, and close with the commit
   and how you verified.

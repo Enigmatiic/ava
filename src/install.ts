@@ -15,8 +15,16 @@ const START = "<!-- ava:start";
 const END = "<!-- ava:end -->";
 
 const LAYOUT = {
-  "claude-code": { skills: ".claude/skills", hooks: ".claude/settings.json", instructions: "CLAUDE.md", impeccable: "claude" },
-  codex: { skills: ".agents/skills", hooks: ".codex/hooks.json", instructions: "AGENTS.md", impeccable: "codex" },
+  "claude-code": { 
+    skills: ".claude/skills", 
+    hooks: ".claude/settings.json", 
+    instructions: "CLAUDE.md", 
+    impeccable: "claude" },
+  codex: { 
+    skills: ".agents/skills", 
+    hooks: ".codex/hooks.json", 
+    instructions: "AGENTS.md", 
+    impeccable: "codex" },
 } as const;
 
 const REVIEWERS = {
